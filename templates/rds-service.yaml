@@ -106,7 +106,7 @@ Resources:
     Type: AWS::RDS::DBParameterGroup
     Properties:
       Description: Parameters that tune up MariaDB for better Prestashop performances
-      Family: mariadb10.11
+      Family: mariadb10.6
       Parameters:
         performance_schema: 'OFF'
         innodb_lock_wait_timeout: '120'
@@ -142,7 +142,7 @@ Resources:
     Properties:
       AllowMajorVersionUpgrade: true
       Engine: MariaDB
-      EngineVersion: 10.11.6
+      EngineVersion: 10.6.16
       DBInstanceClass:
         Ref: DatabaseInstanceType
       DBParameterGroupName: !Ref DBParameterGroup
